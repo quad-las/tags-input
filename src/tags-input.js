@@ -1,10 +1,10 @@
 const BACKSPACE = 8,
 	TAB = 9,
-	ENTER = 13,
-	LEFT = 37,
-	RIGHT = 39,
+	//ENTER = 13,
+	//LEFT = 37,
+	//RIGHT = 39,
 	DELETE = 46,
-	COMMA = 188;
+	//COMMA = 188;
 
 const SEPERATOR = ',';
 
@@ -160,7 +160,7 @@ export default function tagsInput(input) {
 
 		setInputWidth();
 
-		if (key===ENTER || key===COMMA || key===TAB) {
+		if (key===TAB) { //key===ENTER || key===COMMA || 
 			if (!el.value && key!==COMMA) return;
 			savePartialInput();
 		}
@@ -184,6 +184,7 @@ export default function tagsInput(input) {
 				return;
 			}
 		}
+		/*
 		else if (key===LEFT) {
 			if (selectedTag) {
 				if (selectedTag.previousSibling) {
@@ -201,6 +202,7 @@ export default function tagsInput(input) {
 			if (!selectedTag) return;
 			select(selectedTag.nextSibling);
 		}
+		*/
 		else {
 			return select();
 		}
